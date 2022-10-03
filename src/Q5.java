@@ -1,7 +1,7 @@
 // Q5)Implement multiple inheritance with default method inside interface.
 
 interface parentA{
-    default void printInfoA(){
+    default  void printInfoA(){
         System.out.println("Hi i am parent A");
     }
 }
@@ -19,8 +19,27 @@ interface parentC {
         System.out.println("Hi i am parent C");
     }
 }
-public class Q5 implements parentC , parentA ,parentB {
+public class Q5 implements parentB,parentA,parentC{
+//    @Override
+//    public void printInfoA() {
+//        parentA.super.printInfoA();
+//    }
+//
+//    @Override
+//    public void printInfoB() {
+//        parentB.super.printInfoB();
+//    }
+//
+//    @Override
+//    public void printInfoC() {
+//        parentC.super.printInfoC();
+//    }
+
     public static void main(String[] args) {
+               Q5 obj =new Q5();
+               obj.printInfoA();
+               obj.printInfoB();
+               obj.printInfoC();
 
     }
 }

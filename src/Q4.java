@@ -15,6 +15,7 @@ Q4) WAP using java 8:
  */
 
 import java.util.Arrays;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 class Employee{
@@ -42,7 +43,9 @@ public class Q4 {
         Employee emp6=new Employee("Gojou david Satoru",12000l,"Dressrosa");
 
         Stream<Employee> str= Stream.of(emp1,emp2,emp3,emp4,emp5,emp6,emp7);
-        str.filter(value->value.)
+        System.out.println(str
+                .filter(e-> e.salary<5000 && e.city.equals("delhi") )
+                .map(e->e.fullName.split(" ")[0]).collect(Collectors.toSet()));;
 
     }
 }
