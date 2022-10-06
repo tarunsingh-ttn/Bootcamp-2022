@@ -15,80 +15,25 @@ All 4 should have following methods:
 */
 
 public class Bank {
-    private int numberOfCustomers;
-    private int numberOfBranches;
 
-    private String name;
-    private String bankName;
-    private int accountBalance;
-    private int rateOfInterest;
-
-    private enum accountType{ SAVINGS,CURRENT};
-
-
-
-    public int getNumberOfCustomers() {
-        return numberOfCustomers;
+    String name=" ";
+    Double rateOfInterest;
+    Integer branch;
+    Bank(String name, Double rateOfInterest, Integer branch){
+        this.name=name;
+        this.rateOfInterest=rateOfInterest;
+        this.branch=branch;
     }
 
-    public void setNumberOfCustomers(int numberOfCustomers) {
-        this.numberOfCustomers = numberOfCustomers;
+    public Bank() {
+
     }
 
-    public int getNumberOfBranches() {
-        return numberOfBranches;
+    public void getDetails(){
+        System.out.println(this.name+" "+this.rateOfInterest);
     }
 
-    public void setNumberOfBranches(int numberOfBranches) {
-        this.numberOfBranches = numberOfBranches;
-    }
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getBankName() {
-        return bankName;
-    }
-
-    public void setBankName(String bankName) {
-        this.bankName = bankName;
-    }
-
-    public int getAccountBalance() {
-        return accountBalance;
-    }
-
-    public void setAccountBalance(int accountBalance) {
-        this.accountBalance = accountBalance;
-    }
-
-    public int getRateOfInterest() {
-        return rateOfInterest;
-    }
-
-    public void setRateOfInterest(int rateOfInterest) {
-        this.rateOfInterest = rateOfInterest;
-    }
-
-    public  void getDetails(){
-            //send rateOfInterest
-    };
-    // this will print the above details
-       void printDetails(){
-
-
-    };
-
-    //common functionality
-     void debit_amount(Bank account){
-
-            account.setAccountBalance(account.accountBalance--);
-     };
 
 
      public static  void main(String[] args){
