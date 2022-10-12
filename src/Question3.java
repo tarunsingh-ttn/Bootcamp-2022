@@ -19,8 +19,9 @@ class SyncWorker implements Runnable {
 
 public class Question3 {
     public static void main(String[] args) {
-        Thread thread1 = new Thread(new SyncWorker());
-        Thread thread2 = new Thread(new SyncWorker());
+        SyncWorker s=new SyncWorker();
+        Thread thread1 = new Thread(s);
+        Thread thread2 = new Thread(s);
         thread1.start();
         thread2.start();
 
