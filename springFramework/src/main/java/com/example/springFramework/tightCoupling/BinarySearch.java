@@ -13,9 +13,7 @@ public class BinarySearch {
    }
     void searchElement(int i) {
         // using new keyword
-        // our code is tight coupled if we implement our sorting algorithm class here in the BinarySearch class itself
-        // but if create different classes to separate the concern , it would be loose coupled.
-        // we can instantiate any sorting algo and call its specific sort method implementation.
+
 
         BubbleSort bubbleSort = new BubbleSort();
         bubbleSort.sortArray(new int[]{1, 2, 9, 4});
